@@ -12,9 +12,9 @@
   <meta property="og:description" content="Trusted local support for visitors, homeowners, and new residents in El Valle de Anton.">
   <meta property="og:url" content="https://elvalleconcierge.com/">
   <meta property="og:site_name" content="El Valle Concierge">
-  <meta property="og:image" content="https://elvalleconcierge.com/el-valle-concierge-logo.png">
+  <meta property="og:image" content="https://elvalleconcierge.com/el-valle-hero.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://elvalleconcierge.com/el-valle-concierge-logo.png">
+  <meta name="twitter:image" content="https://elvalleconcierge.com/el-valle-hero.png">
   <meta name="theme-color" content="#3d4a3f">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <script type="application/ld+json">
@@ -117,9 +117,9 @@
       isolation: isolate;
       color: var(--white);
       background:
-        linear-gradient(180deg, rgba(61, 74, 63, .48), rgba(61, 74, 63, .88)),
-        radial-gradient(circle at 18% 24%, rgba(200, 161, 106, .32), transparent 28%),
-        linear-gradient(135deg, #7f8b72 0%, #3d4a3f 52%, #243027 100%);
+        linear-gradient(90deg, rgba(36, 48, 39, .76) 0%, rgba(36, 48, 39, .58) 45%, rgba(36, 48, 39, .2) 100%),
+        linear-gradient(180deg, rgba(61, 74, 63, .2), rgba(36, 48, 39, .78)),
+        url("el-valle-hero.png") center center / cover no-repeat;
     }
 
     .hero::before {
@@ -130,7 +130,7 @@
       z-index: -1;
       background: var(--sage);
       clip-path: polygon(0 84%, 6% 78%, 12% 75%, 20% 68%, 29% 56%, 38% 42%, 46% 32%, 55% 24%, 63% 22%, 70% 30%, 77% 48%, 86% 61%, 94% 70%, 100% 76%, 100% 100%, 0 100%);
-      opacity: .9;
+      opacity: .26;
     }
 
     .hero::after {
@@ -375,8 +375,8 @@
       overflow: hidden;
       border-radius: 8px;
       background:
-        linear-gradient(180deg, rgba(61,74,63,.12), rgba(61,74,63,.64)),
-        linear-gradient(135deg, #d8c8b1, #77866f 52%, #3d4a3f);
+        linear-gradient(180deg, rgba(61,74,63,.02), rgba(61,74,63,.26)),
+        url("india-dormida-trail.png") center center / cover no-repeat;
       box-shadow: var(--shadow);
     }
 
@@ -387,7 +387,7 @@
       height: 58%;
       background: var(--sage);
       clip-path: polygon(0 78%, 8% 76%, 17% 70%, 26% 58%, 35% 42%, 45% 25%, 53% 16%, 62% 13%, 70% 21%, 78% 42%, 88% 59%, 100% 72%, 100% 100%, 0 100%);
-      opacity: .9;
+      opacity: 0;
     }
 
     .landscape-card::after {
