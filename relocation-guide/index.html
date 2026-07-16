@@ -628,5 +628,24 @@
       <div>Powered by <a href="https://www.vallego.co/" target="_blank" rel="noopener noreferrer">Valle Go</a></div>
     </div>
   </footer>
+  <script>
+    (function () {
+      var savedLanguage = localStorage.getItem("evc-language");
+      var languageFromUrl = new URLSearchParams(window.location.search).get("lang");
+      var language = languageFromUrl || savedLanguage || "en";
+      var selected = document.getElementById(language === "es" ? "lang-es" : "lang-en");
+
+      if (selected) {
+        selected.checked = true;
+      }
+      localStorage.setItem("evc-language", language === "es" ? "es" : "en");
+
+      document.querySelectorAll("input[name='evc-language']").forEach(function (input) {
+        input.addEventListener("change", function () {
+          localStorage.setItem("evc-language", input.id === "lang-es" ? "es" : "en");
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
