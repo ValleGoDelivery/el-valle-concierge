@@ -64,6 +64,58 @@
 
     a { color: inherit; }
 
+    .nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 5;
+      padding: 22px 0;
+      color: var(--white);
+    }
+
+    .nav-inner {
+      width: min(var(--max), calc(100% - 36px));
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .nav a {
+      color: rgba(255,253,248,.9);
+      text-decoration: none;
+      font-weight: 850;
+      font-size: .9rem;
+    }
+
+    .nav-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      padding-right: 116px;
+    }
+
+    .nav-cta {
+      padding: 9px 13px;
+      border-radius: 999px;
+      color: var(--ink) !important;
+      background: #f2c879;
+    }
+
     .lang-radio {
       position: absolute;
       opacity: 0;
@@ -234,6 +286,13 @@
       color: var(--ink);
       background: var(--gold);
       box-shadow: 0 14px 34px rgba(0,0,0,.24);
+    }
+
+    .btn-assistance {
+      color: #1f281f;
+      background: linear-gradient(135deg, #f2c879 0%, #d6a34d 48%, #f7df9f 100%);
+      border: 1px solid rgba(255,255,255,.48);
+      box-shadow: 0 18px 42px rgba(0,0,0,.3), 0 0 0 6px rgba(242,200,121,.16);
     }
 
     .btn-secondary {
@@ -540,6 +599,7 @@
 
       .service-grid { gap: 14px; }
       .partner-inner { align-items: start; }
+      .nav-links { display: none; }
     }
 
     @media (max-width: 640px) {
@@ -590,6 +650,17 @@
   </div>
 
   <main class="site site-en">
+    <nav class="nav" aria-label="Main navigation">
+      <div class="nav-inner">
+        <a class="nav-brand" href="/"><span class="brand-dot"></span>El Valle Concierge</a>
+        <div class="nav-links">
+          <a href="/relocation-guide/">Relocation Guide</a>
+          <a href="#services-en">Services</a>
+          <a class="nav-cta" href="/request-assistance/">Request Assistance</a>
+        </div>
+      </div>
+    </nav>
+
     <section class="hero" id="top-en">
       <div class="hero-inner">
         <div class="brand-lockup" aria-label="El Valle Concierge logo">
@@ -598,7 +669,7 @@
         <h1>Your trusted local connection in El Valle de Anton.</h1>
         <p class="hero-copy">Personalized assistance, trusted local partners, and concierge services for visitors, homeowners, and future residents.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="https://wa.me/50766532922" target="_blank" rel="noopener noreferrer">Contact Us</a>
+          <a class="btn btn-assistance" href="/request-assistance/">Request Assistance</a>
           <a class="btn btn-secondary" href="#services-en">Explore Services</a>
         </div>
       </div>
@@ -703,7 +774,7 @@
           <h3>Need local help in El Valle?</h3>
           <p>Tell us what you need. We are starting with simple, high-value requests while we build the full concierge network.</p>
           <div class="contact-links">
-            <a class="btn btn-primary" href="https://wa.me/50766532922" target="_blank" rel="noopener noreferrer">Message on WhatsApp</a>
+            <a class="btn btn-assistance" href="/request-assistance/">Request Assistance</a>
             <a class="btn btn-secondary" href="https://www.vallego.co/" target="_blank" rel="noopener noreferrer">Visit Valle Go</a>
           </div>
         </div>
@@ -717,6 +788,17 @@
   </main>
 
   <main class="site site-es">
+    <nav class="nav" aria-label="Navegacion principal">
+      <div class="nav-inner">
+        <a class="nav-brand" href="/"><span class="brand-dot"></span>El Valle Concierge</a>
+        <div class="nav-links">
+          <a href="/relocation-guide/">Guía de Relocación</a>
+          <a href="#services-es">Servicios</a>
+          <a class="nav-cta" href="/request-assistance/">Solicitar Asistencia</a>
+        </div>
+      </div>
+    </nav>
+
     <section class="hero" id="top-es">
       <div class="hero-inner">
         <div class="brand-lockup" aria-label="Logo de El Valle Concierge">
@@ -725,7 +807,7 @@
         <h1>Tu conexión local de confianza en El Valle de Antón.</h1>
         <p class="hero-copy">Asistencia personalizada, aliados locales confiables y servicios concierge para visitantes, propietarios y futuros residentes.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="https://wa.me/50766532922" target="_blank" rel="noopener noreferrer">Contáctanos</a>
+          <a class="btn btn-assistance" href="/request-assistance/">Solicitar Asistencia</a>
           <a class="btn btn-secondary" href="#services-es">Ver Servicios</a>
         </div>
       </div>
@@ -830,7 +912,7 @@
           <h3>¿Necesitas ayuda local en El Valle?</h3>
           <p>Cuéntanos qué necesitas. Estamos comenzando con solicitudes simples y de alto valor mientras construimos la red completa de concierge.</p>
           <div class="contact-links">
-            <a class="btn btn-primary" href="https://wa.me/50766532922" target="_blank" rel="noopener noreferrer">Escribir por WhatsApp</a>
+            <a class="btn btn-assistance" href="/request-assistance/">Solicitar Asistencia</a>
             <a class="btn btn-secondary" href="https://www.vallego.co/" target="_blank" rel="noopener noreferrer">Visitar Valle Go</a>
           </div>
         </div>
