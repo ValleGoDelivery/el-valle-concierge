@@ -26,12 +26,24 @@
 <body>
   <main class="card">
     <img src="../el-valle-concierge-logo.png" alt="El Valle Concierge - Powered by Valle Go">
-    <h1>Thank you.</h1>
-    <p>Your request has been sent to El Valle Concierge. We will review it and respond shortly.</p>
+    <h1 data-en="Thank you." data-es="Gracias.">Thank you.</h1>
+    <p data-en="Your request has been sent to El Valle Concierge. We will review it and respond shortly." data-es="Tu solicitud ha sido enviada a El Valle Concierge. La revisaremos y responderemos pronto.">Your request has been sent to El Valle Concierge. We will review it and respond shortly.</p>
     <div class="actions">
-      <a class="primary" href="/">Return Home</a>
-      <a class="secondary" href="/relocation-guide/">Read the Relocation Guide</a>
+      <a class="primary" href="/" data-en="Return Home" data-es="Volver al Inicio">Return Home</a>
+      <a class="secondary" href="/relocation-guide/" data-en="Read the Relocation Guide" data-es="Leer la Guía de Relocación">Read the Relocation Guide</a>
     </div>
   </main>
+  <script>
+    (function () {
+      var language = localStorage.getItem("evc-language") || "en";
+
+      if (language === "es") {
+        document.documentElement.lang = "es";
+        document.querySelectorAll("[data-es]").forEach(function (element) {
+          element.textContent = element.getAttribute("data-es");
+        });
+      }
+    })();
+  </script>
 </body>
 </html>
