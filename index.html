@@ -524,6 +524,54 @@
       margin-top: 24px;
     }
 
+    .living-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+      margin-top: 36px;
+    }
+
+    .living-card {
+      display: grid;
+      align-content: end;
+      min-height: 390px;
+      overflow: hidden;
+      position: relative;
+      padding: 30px;
+      border-radius: 8px;
+      color: var(--white);
+      text-decoration: none;
+      background:
+        linear-gradient(180deg, rgba(36,48,39,.08), rgba(36,48,39,.82)),
+        url("india-dormida-trail.png") center center / cover no-repeat;
+      box-shadow: var(--shadow);
+    }
+
+    .living-card.secondary {
+      background:
+        linear-gradient(180deg, rgba(36,48,39,.08), rgba(36,48,39,.82)),
+        url("el-valle-hero.png") center center / cover no-repeat;
+    }
+
+    .living-card h3 {
+      margin: 0;
+      max-width: 540px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.9rem, 3.2vw, 3rem);
+      line-height: 1;
+      font-weight: 500;
+    }
+
+    .living-card p {
+      max-width: 560px;
+      margin: 14px 0 0;
+      color: rgba(255,253,248,.88);
+    }
+
+    .living-card .eyebrow {
+      color: var(--gold);
+    }
+
     .contact {
       display: grid;
       grid-template-columns: 1fr .85fr;
@@ -590,6 +638,7 @@
     @media (max-width: 920px) {
       .audience-grid,
       .service-grid,
+      .living-grid,
       .split,
       .contact,
       .guide-feature,
@@ -756,14 +805,22 @@
       </div>
     </section>
 
-    <section class="section alt" id="relocation-guide-en">
-      <div class="wrap guide-feature">
-        <div class="guide-photo" aria-label="Trail and mountain view in El Valle de Anton"></div>
-        <div class="guide-card">
-          <p class="eyebrow">Relocation Resource</p>
-          <h2>Thinking about moving to El Valle?</h2>
-          <p class="lead">Start with our practical relocation guide for future residents, homeowners, retirees, and families exploring life in El Valle de Anton.</p>
-          <a class="btn btn-sage" href="/relocation-guide/">Read the Relocation Guide</a>
+    <section class="section alt" id="living-in-el-valle-en">
+      <div class="wrap">
+        <p class="eyebrow">Living in El Valle</p>
+        <h2>Practical stories and guides from people building a life here.</h2>
+        <p class="lead">Start with the local perspective behind El Valle Concierge, then use our relocation guide to understand the practical details of settling into Panama's mountain paradise.</p>
+        <div class="living-grid">
+          <a class="living-card" href="/why-we-chose-el-valle/">
+            <p class="eyebrow">Featured Story</p>
+            <h3>Why We Chose El Valle de Anton</h3>
+            <p>The story of how a short visit became a new chapter of life in Panama's mountain paradise.</p>
+          </a>
+          <a class="living-card secondary" href="/relocation-guide/">
+            <p class="eyebrow">Relocation Resource</p>
+            <h3>Moving to El Valle</h3>
+            <p>A practical guide for future residents, homeowners, retirees, and families exploring life in El Valle.</p>
+          </a>
         </div>
       </div>
     </section>
@@ -894,14 +951,22 @@
       </div>
     </section>
 
-    <section class="section alt" id="relocation-guide-es">
-      <div class="wrap guide-feature">
-        <div class="guide-photo" aria-label="Sendero y vista de montana en El Valle de Anton"></div>
-        <div class="guide-card">
-          <p class="eyebrow">Recurso de Relocación</p>
-          <h2>¿Estás pensando en mudarte a El Valle?</h2>
-          <p class="lead">Comienza con nuestra guía práctica para futuros residentes, propietarios, jubilados y familias que están explorando la vida en El Valle de Antón.</p>
-          <a class="btn btn-sage" href="/relocation-guide/">Leer la Guía de Relocación</a>
+    <section class="section alt" id="living-in-el-valle-es">
+      <div class="wrap">
+        <p class="eyebrow">Vivir en El Valle</p>
+        <h2>Historias y guías prácticas de personas construyendo una vida aquí.</h2>
+        <p class="lead">Comienza con la perspectiva local detrás de El Valle Concierge y luego usa nuestra guía de relocación para entender los detalles prácticos de instalarte en este paraíso de montaña.</p>
+        <div class="living-grid">
+          <a class="living-card" href="/why-we-chose-el-valle/">
+            <p class="eyebrow">Historia Destacada</p>
+            <h3>Por qué escogimos El Valle de Antón</h3>
+            <p>La historia de cómo una visita corta se convirtió en un nuevo capítulo de vida en el paraíso de montaña de Panamá.</p>
+          </a>
+          <a class="living-card secondary" href="/relocation-guide/">
+            <p class="eyebrow">Recurso de Relocación</p>
+            <h3>Mudarse a El Valle</h3>
+            <p>Una guía práctica para futuros residentes, propietarios, jubilados y familias explorando la vida en El Valle.</p>
+          </a>
         </div>
       </div>
     </section>
